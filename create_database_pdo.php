@@ -17,13 +17,13 @@
 	$connection->exec($sql);
 	echo "Successfully  database created";
 
-	} catch (Exception $e) {
+	} catch (PDOException  $e) {
 	echo "something wen wrong".$e->getMessage();
 
 	}
 
 //as we did  in mysql with close ,we are making it to null
-	$connection->null;
+	$connection = null;
 
 
 	?>

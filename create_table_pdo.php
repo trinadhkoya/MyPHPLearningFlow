@@ -28,8 +28,7 @@
 
 	}
 
-
-	$connection->null;
+	$connection=null;
 
 
 	?>
