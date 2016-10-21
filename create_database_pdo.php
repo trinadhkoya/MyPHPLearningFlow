@@ -22,8 +22,8 @@
 
 	}
 
-
-
+//as we did  in mysql with close ,we are making it to null
+	$connection->null;
 
 
 	?>
