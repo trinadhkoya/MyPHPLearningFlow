@@ -33,6 +33,9 @@
 	$connection->exec("INSERT INTO $tablename (firstname,lastname,email) VALUES('stev','jobs','steven@apple.com')");
 	$connection->exec("INSERT INTO $tablename (firstname,lastname,email) VALUES('stee','j','steven@apple.com')");
 
+	$connection->exec("INSERT INTO $tablename (firstname,lastname,email) VALUES('stve','o','steven@apple.com')");
+
+	$connection->exec("INSERT INTO $tablename (firstname,lastname,email) VALUES('seve','b','steven@apple.com')");
 
 
 
@@ -42,20 +45,16 @@
 	echo "the last inserted id is ".$last_insert_id;
 
 	//make sure commit the transactions.
-	// commit the transaction
 	$connection->commit();
 
+	} catch (PDOException $e) {
 
-	} 
-	catch (PDOException  $e) {
+	die ("Any thing wrong let me know and roll back    ".$e->getMessage());
+	$connection->rollback();
 
-	//
-	 $connection->rollback();
-	// echo "Any thing wrong let me know and roll back" .$e->getMessage();
-	
+
 
 	}
-
 	$connection=null;
 
 
