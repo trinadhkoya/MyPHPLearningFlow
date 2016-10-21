@@ -21,12 +21,12 @@
 	$connection->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 	echo "connection success";
 
-	} catch (Exception $e) {
+	} catch (PDOException  $e) {
 		echo "connection failed ".$e->getMessage();
 	}
 
 
 
-
+$connection=null;
 
 	?>
